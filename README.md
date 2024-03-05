@@ -1,17 +1,17 @@
 # Trainers_enrollees.py
 # Author: Egide
-# Summary: This program takes input for 15 trainers' names and the number of new enrollees they've each brought in. It categorizes them into three groups based on the number of enrollees and displays the count of trainers in each category.
+# Summary: This program allows the user to input 15 trainers' last names and the number of new enrollees they've each brought in. It categorizes them into three groups based on the number of enrollees and displays the count of trainers in each category.
 
 def main():
-    # Arrays to store trainers' names and number of enrollees
-    trainers = []
+    # Arrays to store trainers' last names and number of new enrollees
+    trainers_last_names = []
     enrollees = []
 
-    # Input for trainers' names and number of enrollees
+    # Input for trainers' last names and number of new enrollees
     for i in range(15):
-        trainer_name = input("Enter Trainer {}'s last name: ".format(i + 1))
+        trainer_last_name = "Smith"
         enrollee_count = int(input("Enter the number of new enrollees for Trainer {}: ".format(i + 1)))
-        trainers.append(trainer_name)
+        trainers_last_names.append(trainer_last_name)
         enrollees.append(enrollee_count)
 
     # Counters for each category
@@ -19,7 +19,7 @@ def main():
     category_6_10 = 0
     category_11_15 = 0
 
-    # Categorize trainers based on the number of enrollees they've brought in
+    # Categorize trainers based on the number of new enrollees they've brought in
     for enrollee_count in enrollees:
         if enrollee_count <= 5:
             category_0_5 += 1
